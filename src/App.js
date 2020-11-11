@@ -1,11 +1,16 @@
 import logo from './logo.svg';
-
+import React, { useState } from 'react';
+import data from './data';
 
 function App() {
+  const [people, setPeople] = useState(data);
+  console.log(people);
   return (
-    <div>
-    <h1>Hello World</h1>
-    </div>
+    <main>
+    <section>
+    <h2>{people.length} birthdays today</h2>
+    </section>
+    </main>
   );
 }
 
